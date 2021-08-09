@@ -1,7 +1,7 @@
 name = "CommonEq"
 uuid = "3709ef60-1bee-4518-9f2f-acd86f176c50"
 authors = ["jverzani <jverzani@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [compat]
 julia = "1"
