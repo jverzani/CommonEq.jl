@@ -6,22 +6,29 @@ export  Lt, ≪, Le, ≦, Eq, ⩵, Ne, ≶, ≷, Ge, ≫, Gt, ≧
 
 
 "Lt"
-Lt(a::Any, b::Any) = nothing
+Lt(a::T, b::S) where {T,S} = Lt(promote(a,b)...)
+Lt(a::T, b::T) where {T} = nothing
 
 "Le"
-Le(a::Any, b::Any) = nothing
+Le(a::T, b::S) where {T,S} = Le(promote(a,b)...)
+Le(a::T, b::T) where {T} = nothing
 
 "Eq"
-Eq(a::Any, b::Any) = nothing
+Eq(a::T, b::S) where {T,S} = Eq(promote(a,b)...)
+Eq(a::T, b::T) where {T} = nothing
 
 "Ne"
-Ne(a::Any, b::Any) = nothing
+Ne(a::T, b::S) where {T,S} = Ne(promote(a,b)...)
+Ne(a::T, b::T) where {T} = nothing
 
 "Ge"
-Ge(a::Any, b::Any) = nothing
+Ge(a::T, b::S) where {T,S} = Ge(promote(a,b)...)
+Ge(a::T, b::T) where {T} = nothing
 
-"Gt"
-Gt(a::Any, b::Any) = nothing
+"Lt"
+Gt(a::T, b::S) where {T,S} = Gt(promote(a,b)...)
+Gt(a::T, b::T) where {T} = nothing
+
 
 "≪, `\\ll[tab]` or `Lt`"
 const ≪  = Lt
